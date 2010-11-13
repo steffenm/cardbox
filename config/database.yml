@@ -1,0 +1,20 @@
+default: &default
+  adapter: mysql
+  host: localhost
+  username: karteikarten
+  password: karteikarten
+
+development:
+  <<: *default
+  database: karteikarten_dev
+
+test:
+  <<: *default
+  database: karteikarten_test
+
+production:
+  <<: *default
+  database: karteikarten
+
+
+  
