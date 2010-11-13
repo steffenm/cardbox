@@ -14,7 +14,10 @@ gem 'mysql', '2.8.1'
 # gem 'capistrano'
 
 # To use debugger
-gem 'ruby-debug19', :require => 'ruby-debug', :group => :development
+#gem 'ruby-debug19', :require => 'ruby-debug', :group => :development
+gem 'ruby-debug'
+gem 'has_machine_tags', '0.1.8'
+
 
 # Bundle the extra gems:
 # gem 'bj'
