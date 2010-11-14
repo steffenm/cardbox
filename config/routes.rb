@@ -1,4 +1,6 @@
 Karteikarten::Application.routes.draw do
+  resources :cards
+
   get "home/index"
 
   devise_for :users

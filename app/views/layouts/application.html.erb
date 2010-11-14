@@ -30,7 +30,9 @@
           <span id='login_info'>
             <% if user_signed_in? %>
               <h3>Du bist angemeldet als:<br /><%=h current_user.username %></h3>
-              <%=link_to "Abmelden", destroy_user_session_path %>
+              <ul class="subnav">
+                <li><%=link_to "Abmelden", destroy_user_session_path %></li>
+              </ul>  
             <% else %>
               <h2>Anmeldung</h2>
               <ul class="subnav">

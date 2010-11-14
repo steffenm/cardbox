@@ -438,3 +438,28 @@ blockquote p {
   background: #FF9999;
   padding-left: 10px;
 }
+
+table{
+  border: 1px dotted gray;
+  border-spacing: 0px;
+}
+
+th{
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background: #CCCCCC;
+  color: #333333;
+  border-bottom: 1px dotted gray;
+  text-align: center;
+}
+
+td{
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: black;
+  text-align: left;
+}
