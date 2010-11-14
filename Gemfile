@@ -15,8 +15,9 @@ gem 'mysql', '2.8.1'
 
 # To use debugger
 #gem 'ruby-debug19', :require => 'ruby-debug', :group => :development
-gem 'ruby-debug'
+gem 'ruby-debug', :group => :development
 gem 'has_machine_tags', '0.1.8'
+gem 'devise', '1.1.3'
 
 
 # Bundle the extra gems:
