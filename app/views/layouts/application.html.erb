@@ -19,11 +19,15 @@
           <h2>Vokabeln lernen</h2>
           <ul id="nav">
             <li><%= link_to 'Home', root_path%></li>
-            <li><%= link_to 'Abfragen', root_path %></li>
-            <li><%= link_to 'Eingeben', root_path %></li>
+            <% if user_signed_in? %>
+              <!--<li><%= link_to 'Abfragen', root_path %></li>-->
+              <li><%= link_to 'Eingeben', root_path %></li>
+            <% end %>
           </ul>
           <ul id="subnav">
-            <li><%= link_to '2te Navigation'%></li>
+            <% if user_signed_in? %>
+              <li><%= link_to 'Meine Karten', :action=>"index", :controller=>"cards" %></li>
+            <% end %>
           </ul>
         </div>
         <div id="sidebar">
