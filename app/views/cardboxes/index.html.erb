@@ -1,0 +1,25 @@
+<h2><%= _('Karteikästen') %></h2>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th><%=_('Details')%></th>
+    <th><%=_('Bearbeiten')%></th>
+    <th><%=_('Löschen')%></th>
+  </tr>
+
+<% @cardboxes.each do |cardbox| %>
+  <tr>
+    <td><%= cardbox.name %></td>
+    <td><%= link_to_details(cardbox) %></td>
+    <td><%= link_to_edit(edit_cardbox_path(cardbox)) %></td>
+    <td><%= link_to_delete(cardbox) if cardbox.is_deletable? %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to_new( new_cardbox_path,_('Neuer Karteikasten') )%>
+<br />
+<%= will_paginate @cardboxes %>

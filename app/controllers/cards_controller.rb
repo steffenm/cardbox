@@ -4,7 +4,7 @@ class CardsController < ApplicationController
   # GET /cards
   # GET /cards.xml
   def index
-    @cards = current_user.cards.all
+    @cards = Card.paginate(:page => params[:page])
 
     respond_to do |format|
       format.html # index.html.erb
@@ -15,7 +15,7 @@ class CardsController < ApplicationController
   # GET /cards/1
   # GET /cards/1.xml
   def show
-    @card = current_user.cards.find(params[:id])
+    @card = Card.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -36,7 +36,7 @@ class CardsController < ApplicationController
 
   # GET /cards/1/edit
   def edit
-    @card = current_user.cards.find(params[:id])
+    @card = Card.find(params[:id])
   end
 
   # POST /cards
@@ -46,7 +46,7 @@ class CardsController < ApplicationController
 
     respond_to do |format|
       if @card.save
-        format.html { redirect_to(@card, :notice => 'Karte wurde angelegt.') }
+        format.html { redirect_to(@card, :notice => _('Karte wurde angelegt.')) }
         format.xml  { render :xml => @card, :status => :created, :location => @card }
       else
         format.html { render :action => "new" }
@@ -58,11 +58,11 @@ class CardsController < ApplicationController
   # PUT /cards/1
   # PUT /cards/1.xml
   def update
-    @card = current_user.cards.find(params[:id])
-
+    @card = Card.find(params[:id])
+                       
     respond_to do |format|
       if @card.update_attributes(params[:card])
-        format.html { redirect_to(@card, :notice => 'Karte wurde geändert.') }
+        format.html { redirect_to(@card, :notice => _('Karte wurde geändert.')) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -74,7 +74,7 @@ class CardsController < ApplicationController
   # DELETE /cards/1
   # DELETE /cards/1.xml
   def destroy
-    @card = current_user.cards.find(params[:id])
+    @card = Card.find(params[:id])
     @card.destroy
 
     respond_to do |format|

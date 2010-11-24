@@ -1,4 +1,6 @@
 Karteikarten::Application.routes.draw do
+  resources :cardboxes
+
   resources :cards
 
   get "home/index"

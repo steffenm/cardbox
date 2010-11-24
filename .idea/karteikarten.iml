@@ -18,6 +18,24 @@
     </requirement>
     <requirement>
       <requirement>
+        <dependency name="fast_gettext" version="0.5.10" bound="EQUAL" git="false" />
+      </requirement>
+      <source from="Gemfile" />
+    </requirement>
+    <requirement>
+      <requirement>
+        <dependency name="gettext" version="1.9.3" bound="GREATER_OR_EQUAL" git="false" />
+      </requirement>
+      <source from="Gemfile" />
+    </requirement>
+    <requirement>
+      <requirement>
+        <dependency name="gettext_i18n_rails" version="0" bound="GREATER_OR_EQUAL" git="false" />
+      </requirement>
+      <source from="Gemfile" />
+    </requirement>
+    <requirement>
+      <requirement>
         <dependency name="has_machine_tags" version="0.1.8" bound="EQUAL" git="false" />
       </requirement>
       <source from="Gemfile" />
@@ -43,6 +61,12 @@
     <requirement>
       <requirement>
         <dependency name="ruby-debug" version="0" bound="GREATER_OR_EQUAL" git="false" />
+      </requirement>
+      <source from="Gemfile" />
+    </requirement>
+    <requirement>
+      <requirement>
+        <dependency name="will_paginate" version="3.0.pre2" bound="EQUAL" git="false" />
       </requirement>
       <source from="Gemfile" />
     </requirement>

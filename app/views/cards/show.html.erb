@@ -1,14 +1,12 @@
-<p id="notice"><%= notice %></p>
-
+<h2><%= _('Karte Details')%></h2>
 <p>
-  <b>Seite 1:</b>
+  <b><%= _('Seite 1') %></b>
   <%= @card.side1 %>
 </p>
 
 <p>
-  <b>Seite 2:</b>
+  <b><%= _('Seite 2') %></b>
   <%= @card.side2 %>
 </p>
 
-<%= link_to 'ändern', edit_card_path(@card) %> |
-<%= link_to 'zurück', cards_path %>
+<%= link_to_back cards_path %>&nbsp;<%= link_to_edit edit_card_path(@card) %>

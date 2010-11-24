@@ -16,8 +16,12 @@ gem 'mysql', '2.8.1'
 # To use debugger
 #gem 'ruby-debug19', :require => 'ruby-debug', :group => :development
 gem 'ruby-debug', :group => :development
+gem 'gettext', '>=1.9.3', :require => false, :group => :development
+gem 'fast_gettext', '0.5.10'
+gem 'gettext_i18n_rails'
 gem 'has_machine_tags', '0.1.8'
 gem 'devise', '1.1.3'
+gem "will_paginate", "3.0.pre2"
 
 
 # Bundle the extra gems:

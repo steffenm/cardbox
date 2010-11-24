@@ -1,25 +1,29 @@
-<h2>Liste der Karten</h2>
+<h2><%= _('Karten') %></h2>
 
 <table>
   <tr>
     <th>Seite&nbsp;1</th>
     <th>Seite&nbsp;2</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th><%=_('Details')%></th>
+    <th><%=_('Bearbeiten')%></th>
+    <th><%=_('Löschen')%></th>
   </tr>
 
 <% @cards.each do |card| %>
   <tr>
     <td><%= card.side1 %></td>
     <td><%= card.side2 %></td>
-    <td><%= link_to 'zeigen', card %></td>
-    <td><%= link_to 'ändern', edit_card_path(card) %></td>
-    <td><%= link_to 'löschen', card, :confirm => 'Bist Du sicher?', :method => :delete %></td>
+    <td><%= link_to_details(card )%></td>
+    <td><%= link_to_edit(edit_card_path(card) ) if card.is_editable? %></td>
+    <td><%= link_to_delete(card) if card.is_deletable?%></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'Neue Karte', new_card_path %>
+<%= link_to_new( new_card_path,_('Neue Karte') )%>
+<br />
+<%= will_paginate @cards %>
+
+

@@ -1,0 +1,21 @@
+<%= form_for(@cardbox) do |f| %>
+  <% if @cardbox.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cardbox.errors.count, "error") %> prohibited this cardbox from being saved:</h2>
+
+      <ul>
+      <% @cardbox.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name, _('Name') %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit _('speichern') %>
+  </div>
+<% end %>

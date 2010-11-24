@@ -1,6 +1,5 @@
-<h2>Editing card</h2>
+<h2><%=_('Karte bearbeiten')%></h2>
 
 <%= render 'form' %>
+<%= link_to_back cards_path %>&nbsp;<%= link_to_details @card %>
 
-<%= link_to 'zeigen', @card %> |
-<%= link_to 'zurück', cards_path %>

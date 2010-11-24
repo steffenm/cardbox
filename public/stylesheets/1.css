@@ -463,3 +463,7 @@ td{
   color: black;
   text-align: left;
 }
+
+a img{
+  border: 1px dotted black;
+}

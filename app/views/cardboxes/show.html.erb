@@ -1,0 +1,6 @@
+<h2><%= _('Karteikasten Details')%></h2>
+<p>
+  <b>Name:</b>
+  <%= @cardbox.name %>
+</p>
+<%= link_to_back cardboxes_path %>&nbsp;<%= link_to_edit edit_cardbox_path(@cardbox) %>

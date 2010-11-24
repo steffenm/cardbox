@@ -1,0 +1,14 @@
+<ul id="nav">
+<li><%= link_to _('Startseite'), root_path%></li>
+<% if user_signed_in? %>
+  <!--<li><%= link_to _('Abfragen'), root_path %></li>-->
+  <li><%= link_to 'Bearbeiten', :action=>"index", :controller=>"cards" %></li>
+<% end %>
+</ul>
+<ul id="subnav">
+<% if user_signed_in? %>
+  <li><%= link_to _('Karten bearbeiten'), :action=>"index", :controller=>"cards" %></li>
+  <li><%= link_to _('Karteikästen bearbeiten'), :action=>"index", :controller=>"cards" %></li>
+<% end %>
+</ul>
+        
