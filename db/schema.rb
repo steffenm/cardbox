@@ -10,7 +10,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101124213047) do
+ActiveRecord::Schema.define(:version => 20101128134431) do
+
+  create_table "card_cardboxes", :force => true do |t|
+    t.integer  "card_id"
+    t.integer  "cardbox_id"
+    t.string   "state"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.datetime "status_at"
+  end
 
   create_table "cardboxes", :force => true do |t|
     t.string   "name"

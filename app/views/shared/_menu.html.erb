@@ -8,7 +8,7 @@
 <ul id="subnav">
 <% if user_signed_in? %>
   <li><%= link_to _('Karten bearbeiten'), :action=>"index", :controller=>"cards" %></li>
-  <li><%= link_to _('Karteikästen bearbeiten'), :action=>"index", :controller=>"cards" %></li>
+  <li><%= link_to _('Karteikästen bearbeiten'), :action=>"index", :controller=>"cardboxes" %></li>
 <% end %>
 </ul>
         

@@ -1,4 +1,6 @@
 Karteikarten::Application.routes.draw do
+  resources :card_cardboxes
+
   resources :cardboxes
 
   resources :cards

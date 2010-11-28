@@ -1,0 +1,27 @@
+<h1>Listing card_cardboxes</h1>
+
+<table>
+  <tr>
+    <th>Card</th>
+    <th>Cardbox</th>
+    <th>Status</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @card_cardboxes.each do |card_cardbox| %>
+  <tr>
+    <td><%= card_cardbox.card_id %></td>
+    <td><%= card_cardbox.cardbox_id %></td>
+    <td><%= card_cardbox.status %></td>
+    <td><%= link_to 'Show', card_cardbox %></td>
+    <td><%= link_to 'Edit', edit_card_cardbox_path(card_cardbox) %></td>
+    <td><%= link_to 'Destroy', card_cardbox, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Card cardbox', new_card_cardbox_path %>

@@ -22,6 +22,8 @@ gem 'gettext_i18n_rails'
 gem 'has_machine_tags', '0.1.8'
 gem 'devise', '1.1.3'
 gem "will_paginate", "3.0.pre2"
+gem "transitions", :require => ["transitions", "active_record/transitions"]
+
 
 
 # Bundle the extra gems:

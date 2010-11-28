@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Card:</b>
+  <%= @card_cardbox.card_id %>
+</p>
+
+<p>
+  <b>Cardbox:</b>
+  <%= @card_cardbox.cardbox_id %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @card_cardbox.status %>
+</p>
+
+
+<%= link_to 'Edit', edit_card_cardbox_path(@card_cardbox) %> |
+<%= link_to 'Back', card_cardboxes_path %>

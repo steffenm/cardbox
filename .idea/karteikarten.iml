@@ -66,6 +66,12 @@
     </requirement>
     <requirement>
       <requirement>
+        <dependency name="transitions" version="0" bound="GREATER_OR_EQUAL" lib="[&quot;transitions&quot;, &quot;active_record/transitions&quot;]" git="false" />
+      </requirement>
+      <source from="Gemfile" />
+    </requirement>
+    <requirement>
+      <requirement>
         <dependency name="will_paginate" version="3.0.pre2" bound="EQUAL" git="false" />
       </requirement>
       <source from="Gemfile" />
